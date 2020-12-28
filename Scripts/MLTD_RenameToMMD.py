@@ -27,14 +27,16 @@ obj = context.object
 #  eye texture instead. If you want to use iris bones , try separating the iris texture
 #  from the sclera.
 
+# Set this variable to true if you want to use Japanese names
+use_jp_names = False
 
-
-# This array is the template used for the batch rename script.
-# The format for the array element goes like this:
-#           ("old name","new name")
-# Quote mark is not omitted. Add comma if there's a new bone you want to rename.
-bonenames = [
-    ("BASE",                    "ParentNode"),
+if use_jp_names == False
+    # This array is the template used for the batch rename script.
+    # The format for the array element goes like this:
+    #           ("old name","new name")
+    # Quote mark is not omitted. Add comma if there's a new bone you want to rename.
+    bonenames = [
+    ("BASE",                    "Center"),
     ("MUNE1",                   "UpperBody"),
     ("MUNE2",                   "UpperBody2"),
     ("KUBI",                    "Neck"),
@@ -93,13 +95,16 @@ bonenames = [
     ("ASHI_R",                  "Ankle_R"),
     ("TSUMASAKI_R",             "Toe_R")
 
-]
+    ]
 
-for oldname, newname in bonenames:
+else:
+    # TODO: Modify the list to use Japanese names
+
+for name, newname in bonenames:
     # Get the pose bone with name
-    pb = obj.pose.bones.get(oldname)
+    pb = obj.pose.bones.get(name)
     # Move on if no matching bone found
     if pb is None:
         continue
     # rename
-    pb.oldname = newname
+    pb.name = newname
