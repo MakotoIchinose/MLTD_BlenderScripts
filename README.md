@@ -21,5 +21,5 @@
 
    First, make sure that you copied the code correctly. Failing to do so will render the script
    useless.
-   However, if you have copied it correctly, but still getting error, file an *issue* to me.
+   However, if you have copied it correctly, but still getting error, [*file an issue*](https://github.com/TheHoodieGuy02/MLTD_BlenderScripts/issues/new) to me.
    You can also fix the error yourself, and file a pull request from your fork.
