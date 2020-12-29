@@ -49,7 +49,7 @@ sknames = [
 
 for name, newname in sknames:
     # Get shape keys in the mesh
-    keys = selected_object.data.shape_keys.key_blocks
+    keys = obj.data.shape_keys.key_blocks
     for key in keys:
         # Validate key name before renaming it
         if key.name == name:
