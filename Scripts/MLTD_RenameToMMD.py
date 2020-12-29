@@ -17,10 +17,11 @@ obj = context.object
 #     character. Because the game uses Unity engine, you can rip them using your favourite
 #     Unity ripper tools.
 #  2. Import the models you've ripped from the package into Blender.
-#  3. If the model is to small, scale it up to 100x.
+#  3. If the model is to small, scale it up to 100x, and apply the transform!
 #  4. Join the body armature to the head armature.
 #  5. Delete duplicate bones created from the merger.
-#     Usually the bones are: KUBI.001 and ATAMA.001
+#     Use MLTD_ManageBones.py to manage the bones.
+#     https://github.com/TheHoodieGuy02/MLTD_BlenderScripts/blob/main/Scripts/MLTD_ManageBones.py
 
 # WARNING:
 #  MLTD models do not use bones for the iris position - the game relies on shifting the
